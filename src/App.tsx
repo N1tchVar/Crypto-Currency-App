@@ -1,10 +1,18 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Cryptofy from "./pages/Cryptofy"
+import CryptofyDetails from "./pages/CryptofyDetails"
+import Navbar from "./components/Navbar"
 
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <h1 className="text-center">TEST</h1>
-    </div>
+    <BrowserRouter>
+    <Navbar/>
+      <Routes>
+        <Route path="/" element={ <Cryptofy /> } />
+        <Route path="/coin/:id" element={ <CryptofyDetails /> } />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
