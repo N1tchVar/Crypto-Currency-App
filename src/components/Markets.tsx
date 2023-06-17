@@ -31,9 +31,9 @@ const Market: React.FC = () => {
   }, []);
 
   return (
-    <Link to={`/coin/${crypto.id}`}>
     <h1 className='m-2 mt-4 text-2xl'>Market</h1>
     {cryptoCoins.map((crypto) => (
+         <Link to={`/coin/${crypto.id}`} key={crypto.id}>
       <div className='grid grid-cols-1 text-center sm:grid-cols-1 font-light p-2 rounded
        border-gray-200 border-b hover:bg-gray-200'>
           <div key={crypto.id}>
@@ -51,8 +51,8 @@ const Market: React.FC = () => {
               </div>
           </div>
       </div>
+      </Link>
     ))}
-  </Link>
   );
 };
 
