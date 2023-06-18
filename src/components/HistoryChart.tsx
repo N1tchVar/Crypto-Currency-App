@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import moment from 'moment';
+import { useParams } from "react-router-dom";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend);
 
@@ -12,12 +13,13 @@ type PriceData = {
 
 const HistoryChart: React.FC = () => {
   const [priceData, setPriceData] = useState<PriceData | null>(null);
+  const { id } = useParams();
 
   useEffect(() => {
     const fetchPriceHistory = async () => {
       try {
         const response = await fetch(
-          "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7"
+          `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=7`
         );
         const data = await response.json();
         setPriceData(data);
