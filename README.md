@@ -8,7 +8,7 @@ Cryptofy is a powerful crypto platform that puts you in control of prices and ke
 
 * 📈 Interactive Charts: Analyze historical price data and track the performance of your investments with intuitive and interactive charts. Make informed decisions based on comprehensive market data.
 
-* 🌐 User-friendly Interface: Enjoy a sleek and intuitive user interface designed to provide a seamless experience. Whether you're a seasoned trader or a beginner, Cryptofy makes crypto management effortless. demo version of this APP [Cryptofy](cryptocurrecny-app.netlify.app).
+* 🌐 User-friendly Interface: Enjoy a sleek and intuitive user interface designed to provide a seamless experience. Whether you're a seasoned trader or a beginner, Cryptofy makes crypto management effortless. demo version of this APP [Cryptofy](https://www.cryptocurrecny-app.netlify.app).
 
 # About App 🚀
 
