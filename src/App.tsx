@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Cryptofy from "./pages/Cryptofy"
 import CryptofyDetails from "./pages/CryptofyDetails"
 import Navbar from "./components/Navbar"
+import './index.css'
 
 
 const App: React.FC = () => {

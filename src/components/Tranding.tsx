@@ -27,16 +27,16 @@ const Trending: React.FC = () => {
 
   return (
     <div>
-      <h1 className='text-2xl mb-2 mt-2 font-semibold'>Trending Coins:</h1>
+      <h1 className='text-3xl mb-2 mt-2 p-3 font-semibold'>Trending Coins:</h1>
       <div>
         {trendingCoins.map((coin) => (
           <Link to={`/coin/${coin.item.id}`} key={coin.item.id}>
-            <div className='border-2 rounded-xl border-gray-950 w-full p-2 mb-1 flex items-center gap-3 hover:bg-gray-100'>
+            <div className='sans border-2 rounded-xl border-purple-900 w-full p-2 mb-1 flex items-center gap-3 hover:bg-purple-950 transition duration-300 '>
               <span className='text-1xl font-regular'>{coin.item.score+1}.</span>
               <div>
                 <img src={coin.item.small} alt={coin.name} />
               </div>
-              <div className='flex justify-center items-center font-regular text-1xl gap-2'>
+              <div className='flex justify-center items-center font-regular text-1xl gap-2 font-regular'>
                 <p>{coin.item.name}</p>
                 <p>({coin.item.symbol})</p>
               </div>

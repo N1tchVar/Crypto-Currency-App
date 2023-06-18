@@ -31,16 +31,17 @@ const Market: React.FC = () => {
   }, []);
 
   return (
-    <h1 className='m-2 mt-4 text-2xl'>Market</h1>
+    <>
+    <h1 className='text-3xl font-bold m-2 mt-4 p-3'>Market</h1>
     {cryptoCoins.map((crypto) => (
          <Link to={`/coin/${crypto.id}`} key={crypto.id}>
-      <div className='grid grid-cols-1 text-center sm:grid-cols-1 font-light p-2 rounded
-       border-gray-200 border-b hover:bg-gray-200'>
+      <div className='mb-2 grid grid-cols-1 text-center sm:grid-cols-1 font-light p-2 rounded
+       border-purple-900 border-b hover:bg-purple-950 transition duration-300'>
           <div key={crypto.id}>
               <div className='flex items-center gap-1 w-full'>
                   <img className='w-6' src={crypto.image} alt={crypto.name} />
                   <div className='flex justify-center items-center w-1/4 font-regular'>
-                    <p className='w-full'>{crypto.name}</p>
+                    <p className='w-full font-semibold'>{crypto.name}</p>
                     <span className='text-xs'>({crypto.symbol})</span>
                   </div>
                   <span className='w-full text-center'>${crypto.current_price}</span>
@@ -53,6 +54,7 @@ const Market: React.FC = () => {
       </div>
       </Link>
     ))}
+    </>
   );
 };
 
