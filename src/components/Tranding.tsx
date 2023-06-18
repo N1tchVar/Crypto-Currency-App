@@ -7,6 +7,7 @@ interface Coin {
   name: string;
   symbol: string;
   small: string;
+  item: any;
 }
 
 const Trending: React.FC = () => {
